@@ -1,58 +1,90 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Mario Lasić — Portfolio
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+A personal portfolio for presenting my skills and projects to potential employers. I am building it with Laravel and learning Vue through the project.
 
-## About Laravel
+## Project status
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+The initial development foundation is complete. The home and projects pages currently contain placeholder content, with navigation handled by Inertia. Local development and the initial production asset build have been verified.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Planned for the first release:
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- An introduction and skills overview.
+- A dedicated page showcasing real projects.
+- A downloadable CV.
+- A contact form.
+- A custom, responsive design.
+- A public deployment.
 
-## Learning Laravel
+## Technology
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+- Laravel 13
+- Vue 3 with JavaScript
+- Inertia.js 3
+- Vite 8
 
-In addition, [Laracasts](https://laracasts.com) contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+The default local setup uses SQLite for Laravel infrastructure, including database-backed sessions and cache.
 
-You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
+## Requirements
 
-## Agentic Development
+- PHP 8.4.1 or newer, compatible with the committed Composer lock file; development verified with PHP 8.5.
+- The PHP extensions required by Laravel, including PDO SQLite.
+- Composer 2.
+- Node.js 22.12 or newer and npm.
 
-Laravel's predictable structure and conventions make it ideal for AI coding agents like Claude Code, Cursor, and GitHub Copilot. Install [Laravel Boost](https://laravel.com/docs/ai) to supercharge your AI workflow:
+## First-time local setup
+
+The following commands use a Unix shell:
 
 ```bash
-composer require laravel/boost --dev
-
-php artisan boost:install
+git clone https://github.com/mario-lasic/portfolio.git
+cd portfolio
+composer install
+npm ci
+cp .env.example .env
+php artisan key:generate
+touch database/database.sqlite
+php artisan migrate
 ```
 
-Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
+The default environment example uses SQLite and logs outgoing mail locally.
 
-## Contributing
+## Local development
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Start Laravel in one terminal:
 
-## Code of Conduct
+```bash
+php artisan serve
+```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Start Vite in a second terminal, from the project directory:
 
-## Security Vulnerabilities
+```bash
+npm run dev
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Open [http://127.0.0.1:8000](http://127.0.0.1:8000).
 
-## License
+Current routes:
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+| Route | Page |
+| --- | --- |
+| `/` | Home |
+| `/projects` | Projects |
+
+## Check production assets locally
+
+Stop the Vite development server, then build the frontend assets:
+
+```bash
+npm run build
+```
+
+Keep the Laravel development server running and refresh the browser. Laravel will load the generated assets from `public/build`.
+
+## Manual checks
+
+- Open both routes directly and refresh each page.
+- Navigate between Home and Projects using their links.
+- Check the browser's Back and Forward buttons.
+- Check the browser console for errors.
+- Confirm that the pages also work with built assets after stopping Vite.
