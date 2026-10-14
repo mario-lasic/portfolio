@@ -1,7 +1,7 @@
 <script setup>
 import {projects} from "../learning/project.js";
-import {getProjectSummary} from "../learning/project.js";
 import {ref, computed} from "vue";
+import ProjectCard from "../Components/learning/ProjectCard.vue";
 
 let projectsList = ref(projects.slice());
 const projectCount = computed(() => {
@@ -13,13 +13,17 @@ let note = ref("");
 function removeLastProject() {
     projectsList.value.pop();
 }
+
+function removeProject(id) {
+    projectsList.value = projectsList.value.filter((project) => project.id !== id);
+}
 </script>
 <template>
     <main>
         <h1>Frontend exercises</h1>
         <ul v-if="projectsList.length >= 1">
             <li v-for="project in projectsList" :key="project.id">
-                {{ getProjectSummary(project) }}
+                <ProjectCard :project @remove="removeProject"></ProjectCard>
             </li>
         </ul>
         <p v-else>No projects yet.</p>
