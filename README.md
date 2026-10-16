@@ -9,7 +9,7 @@ The initial development foundation is complete. The home and projects pages curr
 Planned for the first release:
 
 - An introduction and skills overview.
-- A dedicated page showcasing real projects.
+- A project listing and individual project pages with descriptions and screenshots.
 - A downloadable CV.
 - A contact form.
 - A custom, responsive design.
