@@ -10,6 +10,7 @@ investigating why something doesn't work, understanding the cause, and finding a
 ### Buttons
 
 - View projects
+- Download CV
 - Get in touch
 
 ## About
