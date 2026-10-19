@@ -1,10 +1,11 @@
 <script setup>
 import {Link} from "@inertiajs/vue3";
+import SiteLayout from "../Layouts/SiteLayout.vue";
 
 </script>
 <template>
-    <main>
+    <SiteLayout>
         <h1>Mario Lasić Portfolio</h1>
         <Link href="/projects">Projects</Link>
-    </main>
+    </SiteLayout>
 </template>
