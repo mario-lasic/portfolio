@@ -6,6 +6,6 @@ import SiteLayout from "../Layouts/SiteLayout.vue";
 <template>
     <SiteLayout>
         <h1>Mario Lasić Portfolio</h1>
-        <Link href="/projects">Projects</Link>
+        <Link href="/projects" class="button button--primary">Projects</Link>
     </SiteLayout>
 </template>

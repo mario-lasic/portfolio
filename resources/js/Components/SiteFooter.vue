@@ -2,6 +2,8 @@
 </script>
 <template>
     <footer>
-        ©Mario Lasić
+        <p class="site-container">
+            ©Mario Lasić
+        </p>
     </footer>
 </template>

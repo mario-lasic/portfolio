@@ -2,7 +2,7 @@
 </script>
 <template>
     <header>
-        <nav>
+        <nav class="site-container">
             Mario Lasić
         </nav>
     </header>

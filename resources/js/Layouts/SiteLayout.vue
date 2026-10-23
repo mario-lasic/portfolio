@@ -4,7 +4,7 @@ import SiteFooter from "../Components/SiteFooter.vue";
 </script>
 <template>
     <SiteHeader></SiteHeader>
-    <main>
+    <main class="site-container">
         <slot></slot>
     </main>
     <SiteFooter></SiteFooter>

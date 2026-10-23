@@ -4,6 +4,100 @@
 @source '../../storage/framework/views/*.php';
 
 @theme {
-    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-        'Segoe UI Symbol', 'Noto Color Emoji';
+    --font-sans: 'Source Sans 3', Arial, sans-serif;
+}
+
+:root {
+    --background: #141013;
+    --surface: #1D161B;
+    --text: #F4F1F3;
+    --text-muted: #D2C6CF;
+    --accent: #BCA9B7;
+    --button-primary-bg: #A58D9F;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--text);
+    font-family: var(--font-sans), sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.65;
+    @media (min-width: 768px) {
+        font-size: 18px;
+    }
+}
+
+main {
+    padding-block: 64px;
+
+    @media (min-width: 768px) {
+        padding-block: 96px;
+    }
+}
+
+a {
+    color: var(--accent);
+}
+
+h1, h2, h3 {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-weight: 600;
+    line-height: 1.15;
+}
+
+h1 {
+    font-size: 42px;
+    margin-bottom: 24px;
+    @media (min-width: 768px) {
+        font-size: 64px;
+    }
+}
+
+h2 {
+    font-size: 32px;
+    @media (min-width: 768px) {
+        font-size: 40px;
+    }
+}
+
+h3 {
+    font-size: 24px;
+    @media (min-width: 768px) {
+        font-size: 28px;
+    }
+}
+
+.site-container {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding-inline: 20px;
+
+    @media (min-width: 768px) {
+        padding-inline: 24px;
+    }
+}
+
+a:focus-visible, button:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+}
+
+.button {
+    display: inline-flex;
+    border-radius: 9999px;
+    padding: 8px 24px;
+    min-height: 44px;
+    font-weight: 600;
+    align-items: center;
+    justify-content: center;
+}
+
+.button--primary {
+    background-color: var(--button-primary-bg);
+    color: var(--background);
+}
+
+.button--primary:hover {
+    background-color: var(--accent);
 }
