@@ -144,3 +144,28 @@ nav ul .nav-link--active {
         width: 100%;
     }
 }
+
+footer .site-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-block: 24px;
+
+    @media (min-width: 768px) {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+footer ul {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+
+footer ul a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
