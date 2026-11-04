@@ -169,3 +169,28 @@ footer ul a {
     align-items: center;
     gap: 8px;
 }
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    @media (min-width: 768px) {
+        width: 100%;
+        flex-direction: row;
+        gap: 48px;
+    }
+}
+.hero__content {
+    @media (min-width: 768px) {
+        flex: auto;
+    }
+}
+.hero__actions {
+    @media (min-width: 768px) {
+        flex-shrink: 0;
+        align-self: center;
+        text-align: end;
+    }
+}
+
