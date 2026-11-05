@@ -45,12 +45,6 @@ development role while learning Vue and working towards full-stack development.
 - Postman
 - Railway
 
-### Developing further
-
-- JavaScript
-- Vue
-- Inertia
-
 ## Professional links
 
 - [GitHub](https://github.com/mario-lasic)

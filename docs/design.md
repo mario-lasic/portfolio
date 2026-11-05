@@ -106,7 +106,7 @@ when building the pages.
 3. Actions below the introduction: primary View projects, secondary Download CV and a quieter Get in touch
    link to the contact section.
 4. About me using the agreed background and career-change text.
-5. Skills in four groups: Backend, Frontend, Tools and Currently learning.
+5. Skills in three groups: Backend, Frontend and Tools and platforms.
 6. Contact form with Name, Email, Message, Send message and mario.lasic@proton.me.
 7. Compact footer with copyright, GitHub and LinkedIn.
 
@@ -116,16 +116,23 @@ when building the pages.
 - Place the introduction on the left and the action buttons in a separate column on the right.
 - Show desktop navigation links in the header.
 - Keep About text at a comfortable reading width.
-- Arrange the four skills groups in a two-by-two grid.
+- Arrange the three skills groups in one row when the viewport is at least 1024 px wide.
 - Centre the contact form; Name and Email may share a row above Message.
 - Place copyright on the left and professional links on the right of the footer.
 
 ### Skills cards
 
-- Stack four cards vertically on mobile and use a two-by-two grid on desktop.
+- Use three cards: Backend, Frontend and Tools and platforms. This replaces the four-card arrangement in
+  the earlier sketch, following the user's decision during implementation.
+- Stack the cards below 1024 px and use three equal columns from 1024 px. Use gaps of 16 px and 24 px,
+  respectively.
 - Keep headings and skill lists visible.
 - Put recognisable technology icons beside their written names, using the same light mauve as links.
-- Use consistently sized icons and the subtle top-to-bottom gradient specified above.
+- Use 24 × 24 px icons with 12 px between each icon and its label. PHP and PDO share the PHP icon.
+- Skills labels use 18 px text below 768 px and 20 px from 768 px, with 8 px between list items.
+- Give cards 24 px internal padding, a 16 px corner radius, a quiet `#4B3B47` border and the subtle
+  top-to-bottom gradient specified above. Leave 16 px between each card heading and its list, and 24 px
+  between the Skills section heading and the cards.
 - The accepted sketch is the starting point. Refine icon size, internal spacing and card balance in
   PORT-06.02, then check the complete home page at multiple widths in PORT-06.04.
 
