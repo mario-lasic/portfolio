@@ -103,9 +103,9 @@ when building the pages.
 
 1. Header with Mario Lasić's name and a menu button.
 2. Full-width introduction with the agreed role and text from content.md.
-3. Actions below the introduction: primary View projects, secondary Download CV and a quieter Get in touch
-   link to the contact section.
-4. About me using the agreed background and career-change text.
+3. Actions below the introduction: primary View projects and a quieter Get in touch link to the contact
+   section.
+4. About me using the agreed background and career-change text, followed by the CV download card.
 5. Skills in three groups: Backend, Frontend and Tools and platforms.
 6. Contact form with Name, Email, Message, Send message and mario.lasic@proton.me.
 7. Compact footer with copyright, GitHub and LinkedIn.
@@ -115,10 +115,21 @@ when building the pages.
 - Preserve the same section order.
 - Place the introduction on the left and the action buttons in a separate column on the right.
 - Show desktop navigation links in the header.
-- Keep About text at a comfortable reading width.
+- Keep About text at a comfortable reading width, with the CV download card in a column to its right.
 - Arrange the three skills groups in one row when the viewport is at least 1024 px wide.
 - Centre the contact form; Name and Email may share a row above Message.
 - Place copyright on the left and professional links on the right of the footer.
+
+### CV download card
+
+- Place the card beside the About text when there is enough horizontal space, and below it on narrow
+  screens. The Download CV action belongs here rather than in the hero action group.
+- Start with a card approximately 240–280 px wide on desktop, using surface `#1D161B`, a quiet `#4B3B47`
+  border and a 16 px corner radius.
+- Include a circular detail approximately 48 px across with a document icon or the letters CV.
+- Use the title Curriculum vitae, metadata PDF · English and a clear secondary Download CV action.
+- Link to `/files/mario-lasic-cv.pdf` for downloading the existing PDF.
+- Keep About's 85ch text width as a maximum; let its actual width adapt to the space beside the card.
 
 ### Skills cards
 

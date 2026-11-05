@@ -204,9 +204,53 @@ section:not(:first-child) {
     }
 }
 
+.about {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+
+    @media (min-width: 1024px) {
+        grid-template-columns: 1fr 260px;
+        gap: 48px;
+    }
+}
+
 .about p {
     max-width: 85ch;
     margin-top: 16px;
+}
+
+.cv-card {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 24px;
+    background: var(--surface);
+    border: solid 1px #4B3B47;
+    border-radius: 16px;
+    justify-content: center;
+    align-items: center;
+}
+
+.button--secondary {
+    background: transparent;
+    border: solid 1px #725A6C;
+    color: var(--accent);
+}
+
+.button--secondary:hover {
+    background-color: #392D36;
+}
+
+.cv-card__badge {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 100%;
+    background-color: #302930;
+    color: var(--accent);
 }
 
 .skills-container {

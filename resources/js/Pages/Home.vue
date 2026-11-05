@@ -34,12 +34,20 @@ const tools = [
             </div>
         </section>
         <section class="about">
-            <h2>About</h2>
-            <p>My background is in CNC operation and programming, including self-taught CAD/CAM work with bSolid. I’m
-                now moving into web development, building on my PHP backend training at Algebra and practical projects
-                using PHP, Laravel and MySQL.</p>
-            <p>I enjoy investigating problems and understanding how to make things work. I’m looking for my first
-                backend development role while learning Vue and working towards full-stack development.</p>
+            <div class="about__content">
+                <h2>About</h2>
+                <p>My background is in CNC operation and programming, including self-taught CAD/CAM work with bSolid. I’m
+                    now moving into web development, building on my PHP backend training at Algebra and practical projects
+                    using PHP, Laravel and MySQL.</p>
+                <p>I enjoy investigating problems and understanding how to make things work. I’m looking for my first
+                    backend development role while learning Vue and working towards full-stack development.</p>
+            </div>
+            <aside class="cv-card">
+                <span class="cv-card__badge" aria-hidden="true">CV</span>
+                <h3>Curriculum vitae</h3>
+                <span>PDF - English</span>
+                <a href="/files/mario-lasic-cv.pdf" download class="button button--secondary">Download CV</a>
+            </aside>
         </section>
         <section class="skills">
             <h2>Skills</h2>

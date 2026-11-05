@@ -7,10 +7,9 @@
 I build web applications with PHP and Laravel and am looking for my first backend development role. I enjoy
 investigating why something doesn't work, understanding the cause, and finding a solution.
 
-### Buttons
+### Hero actions
 
 - View projects
-- Download CV
 - Get in touch
 
 ## About
@@ -21,6 +20,15 @@ and MySQL.
 
 I enjoy investigating problems and understanding how to make things work. I’m looking for my first backend
 development role while learning Vue and working towards full-stack development.
+
+### CV card
+
+- Title: Curriculum vitae
+- Metadata: PDF · English
+- Action: Download CV
+- Download URL: `/files/mario-lasic-cv.pdf`
+
+Place the card beside the About text on wide screens and below it on narrow screens.
 
 ## Skills
 
