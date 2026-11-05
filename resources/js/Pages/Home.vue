@@ -23,9 +23,10 @@ const tools = [
 </script>
 <template>
     <SiteLayout>
-        <section class="hero">
+        <section class="hero home-section">
             <div class="hero__content">
-                <h1>Junior Backend Developer · PHP & Laravel</h1>
+                <h1>Junior Backend Developer</h1>
+                <span class="hero__stack">PHP & Laravel</span>
                 <p>I build web applications with PHP and Laravel and am looking for my first backend development role. I
                     enjoy investigating why something doesn't work, understanding the cause, and finding a solution.</p>
             </div>
@@ -33,7 +34,7 @@ const tools = [
                 <Link href="/projects" class="button button--primary">View projects</Link>
             </div>
         </section>
-        <section class="about">
+        <section class="about home-section">
             <div class="about__content">
                 <h2>About</h2>
                 <p>My background is in CNC operation and programming, including self-taught CAD/CAM work with bSolid. I’m
@@ -49,12 +50,12 @@ const tools = [
                 <a href="/files/mario-lasic-cv.pdf" download class="button button--secondary">Download CV</a>
             </aside>
         </section>
-        <section class="skills">
+        <section class="skills home-section">
             <h2>Skills</h2>
             <div class="skills-container">
                 <div class="skill-container">
                     <h3>Backend</h3>
-                    <ul>
+                    <ul class="skills__list">
                         <li v-for="backend in backends" :key="backend.name">
                             <span class="skill-icon" aria-hidden="true" v-if="backend.icon"
                                 :style="{ maskImage: 'url(' + backend.icon + ')'}"></span>
@@ -64,7 +65,7 @@ const tools = [
                 </div>
                 <div class="skill-container">
                     <h3>Frontend</h3>
-                    <ul>
+                    <ul class="skills__list">
                         <li v-for="frontend in frontends" :key="frontend.name">
                             <span class="skill-icon" aria-hidden="true" v-if="frontend.icon"
                                 :style="{ maskImage: 'url(' + frontend.icon + ')'}"></span>
@@ -74,7 +75,7 @@ const tools = [
                 </div>
                 <div class="skill-container">
                     <h3>Tools and platforms</h3>
-                    <ul>
+                    <ul class="skills__list">
                         <li v-for="tool in tools" :key="tool.name">
                             <span class="skill-icon" aria-hidden="true" v-if="tool.icon"
                                 :style="{ maskImage: 'url(' + tool.icon + ')'}"></span>

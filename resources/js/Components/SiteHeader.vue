@@ -23,7 +23,7 @@ function handleEscape() {
 <template>
     <header>
         <nav class="site-container" @keydown.esc="handleEscape()">
-            <Link href="/" class="button" @click="closeMenu()">Mario Lasić</Link>
+            <Link href="/" class="button site-brand" @click="closeMenu()">Mario Lasić</Link>
             <button @click="toggleMenu()" type="button" :aria-expanded="isMenuOpen.toString()"
                 aria-controls="primary-navigation" class="button nav-toggle" ref="nav-toggle-btn">
                 {{ isMenuOpen ? "Close" : "Open" }}

@@ -2,7 +2,9 @@
 
 ## Homepage introduction
 
-### Junior Backend Developer · PHP & Laravel
+### Junior Backend Developer
+
+PHP & Laravel
 
 I build web applications with PHP and Laravel and am looking for my first backend development role. I enjoy
 investigating why something doesn't work, understanding the cause, and finding a solution.

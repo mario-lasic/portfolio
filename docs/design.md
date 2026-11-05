@@ -81,6 +81,9 @@ Both families use the SIL Open Font License 1.1. Licence files:
 Start with a line height of 1.15 for headings and 1.65 for paragraphs. Check these values with real content
 when building the pages.
 
+Home section headings have a 2 px decorative line below them. Its gradient spans the heading block and
+fades from mauve to transparent by 20% of its width below 768 px, or by 15% from 768 px.
+
 ## Spacing and surfaces
 
 - Spacing scale: 8, 16, 24, 32, 48, 64 and 96 px.
@@ -102,7 +105,8 @@ when building the pages.
 ### Mobile structure
 
 1. Header with Mario Lasić's name and a menu button.
-2. Full-width introduction with the agreed role and text from content.md.
+2. Full-width introduction with Junior Backend Developer as the main heading, PHP & Laravel as a smaller
+   mauve line below it, and the agreed introductory paragraph from content.md.
 3. Actions below the introduction: primary View projects and a quieter Get in touch link to the contact
    section.
 4. About me using the agreed background and career-change text, followed by the CV download card.
@@ -115,8 +119,10 @@ when building the pages.
 - Preserve the same section order.
 - Place the introduction on the left and the action buttons in a separate column on the right.
 - Show desktop navigation links in the header.
+- Align the name in the header with the left edge of the main content while retaining its visible focus
+  and usable click area.
 - Keep About text at a comfortable reading width, with the CV download card in a column to its right.
-- Arrange the three skills groups in one row when the viewport is at least 1024 px wide.
+- Arrange the three skills groups in one row when the viewport is at least 1280 px wide.
 - Centre the contact form; Name and Email may share a row above Message.
 - Place copyright on the left and professional links on the right of the footer.
 
@@ -135,14 +141,16 @@ when building the pages.
 
 - Use three cards: Backend, Frontend and Tools and platforms. This replaces the four-card arrangement in
   the earlier sketch, following the user's decision during implementation.
-- Stack the cards below 1024 px and use three equal columns from 1024 px. Use gaps of 16 px and 24 px,
+- Stack the cards below 1280 px and use three equal columns from 1280 px. Use gaps of 16 px and 24 px,
   respectively.
 - Keep headings and skill lists visible.
+- Centre the category headings and arrange each card's skill list in two columns, keeping the three
+  cards equally tall when displayed in one row.
 - Put recognisable technology icons beside their written names, using the same light mauve as links.
-- Use 24 × 24 px icons with 12 px between each icon and its label. PHP and PDO share the PHP icon.
-- Skills labels use 18 px text below 768 px and 20 px from 768 px, with 8 px between list items.
+- Use 20 × 20 px icons with 8 px between each icon and its label. PHP and PDO share the PHP icon.
+- Skills labels use 16 px text below 768 px and 18 px from 768 px. Use an 8 px grid gap between items.
 - Give cards 24 px internal padding, a 16 px corner radius, a quiet `#4B3B47` border and the subtle
-  top-to-bottom gradient specified above. Leave 16 px between each card heading and its list, and 24 px
+  top-to-bottom gradient specified above. Leave 24 px between each card heading and its list, and 24 px
   between the Skills section heading and the cards.
 - The accepted sketch is the starting point. Refine icon size, internal spacing and card balance in
   PORT-06.02, then check the complete home page at multiple widths in PORT-06.04.
@@ -151,6 +159,13 @@ when building the pages.
 
 Include a GitHub icon beside GitHub and a LinkedIn icon beside LinkedIn in the shared footer on both screen
 sizes. Icons and link text use light mauve, and the written names remain visible.
+
+### Stylesheets
+
+- `resources/css/app.css` contains the shared palette, typography, layout primitives, buttons, navigation
+  and footer styles, and imports the Home stylesheet after Tailwind.
+- `resources/css/pages/home.css` contains the hero, About, CV and Skills styles. Section spacing is
+  limited to adjacent `.home-section` elements.
 
 ## Projects listing
 

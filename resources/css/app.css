@@ -1,4 +1,5 @@
 @import 'tailwindcss';
+@import './pages/home.css';
 
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 @source '../../storage/framework/views/*.php';
@@ -102,6 +103,20 @@ a:focus-visible, button:focus-visible {
     background-color: var(--accent);
 }
 
+.button--secondary {
+    background: transparent;
+    border: solid 1px #725A6C;
+    color: var(--accent);
+}
+
+.button--secondary:hover {
+    background-color: #392D36;
+}
+
+.site-brand {
+    padding-inline: 0;
+}
+
 nav {
     display: flex;
     justify-content: space-between;
@@ -168,139 +183,4 @@ footer ul a {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-}
-
-.hero {
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
-
-    @media (min-width: 768px) {
-        width: 100%;
-        flex-direction: row;
-        gap: 48px;
-    }
-}
-
-.hero__content {
-    @media (min-width: 768px) {
-        flex: auto;
-    }
-}
-
-.hero__actions {
-    @media (min-width: 768px) {
-        flex-shrink: 0;
-        align-self: center;
-        text-align: end;
-    }
-}
-
-section:not(:first-child) {
-    margin-block-start: 64px;
-
-    @media (min-width: 768px) {
-        margin-block-start: 96px;
-    }
-}
-
-.about {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 32px;
-
-    @media (min-width: 1024px) {
-        grid-template-columns: 1fr 260px;
-        gap: 48px;
-    }
-}
-
-.about p {
-    max-width: 85ch;
-    margin-top: 16px;
-}
-
-.cv-card {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    padding: 24px;
-    background: var(--surface);
-    border: solid 1px #4B3B47;
-    border-radius: 16px;
-    justify-content: center;
-    align-items: center;
-}
-
-.button--secondary {
-    background: transparent;
-    border: solid 1px #725A6C;
-    color: var(--accent);
-}
-
-.button--secondary:hover {
-    background-color: #392D36;
-}
-
-.cv-card__badge {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 48px;
-    height: 48px;
-    border-radius: 100%;
-    background-color: #302930;
-    color: var(--accent);
-}
-
-.skills-container {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 16px;
-
-    @media (min-width: 1024px) {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 24px;
-    }
-}
-
-.skill-container {
-    display: flex;
-    flex-direction: column;
-    background: linear-gradient(to bottom,  #392D36, #1D161B);
-    align-items: center;
-    border: 1px solid #4B3B47;
-    border-radius: 16px;
-    padding: 24px;
-}
-
-.skill-container h3 {
-    margin-block-end: 16px;
-}
-
-.skills h2 {
-    margin-block-end: 24px;
-}
-
-.skill-container li {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    font-size: 18px;
-    margin-block-end: 8px;
-
-    @media (min-width: 768px) {
-        font-size: 20px;
-    }
-}
-
-.skill-icon {
-    display: inline-block;
-    width: 24px;
-    height: 24px;
-    flex-shrink: 0;
-    background-color: var(--accent);
-    mask-size: contain;
-    mask-repeat: no-repeat;
-    mask-position: center;
 }
