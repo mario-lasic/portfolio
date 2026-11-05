@@ -66,24 +66,10 @@ Place the card beside the About text on wide screens and below it on narrow scre
 
 A workout tracking application built with PHP and MySQL for recording workouts, exercises and sets.
 
-#### Key features
+#### Project details
 
-- Create, edit and delete workouts.
-- Add exercises to workouts and change their order.
-- Record sets with repetitions and weight.
-
-#### Backend implementation
-
-Server-side validation, PDO prepared statements, CSRF protection and database transactions.
-
-#### My contribution
-
-I wrote the application code with AI assistance as part of my learning process.
-
-#### What I learned
-
-One of the main challenges was breaking the project into smaller tasks and deciding what to implement first.
-The project gave me practice in planning features and building them step by step.
+The full description is maintained in [GymLog details](../resources/content/projects/gymlog/details.md).
+It covers the application's purpose, workout logging workflow, key features and backend implementation.
 
 #### Technologies
 

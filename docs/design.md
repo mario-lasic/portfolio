@@ -169,44 +169,53 @@ sizes. Icons and link text use light mauve, and the written names remain visible
 
 ## Projects listing
 
-The desktop and mobile listing layout was accepted on 19 October 2026. This sketch records its structure;
-use the current palette above for colours.
+The listing was revised on 5 November 2026 to use project cards in a grid. The earlier sketch is retained
+as a visual reference; the layout below is the current specification.
 
-![Accepted projects listing layout; earlier colours](sketches/projects-desktop-mobile.png)
+![Earlier projects listing sketch](sketches/projects-desktop-mobile.png)
 
 - Shared header and footer, with Projects marked as the current page.
 - Heading: Projects. Introductory sentence: Practical projects built while learning backend development.
-- Repeatable wide project row: cover image left, summary right on desktop; image above summary on mobile.
-- Include title, short description, technology labels with monochrome mauve icons, textual status and a
-  View project link to the details page.
-- For GymLog, use workout-details.png and the description from content.md. Its status is Local learning
-  project, with no public demo.
-- Preserve the source screenshot's landscape aspect ratio without stretching it.
-- Add projects as equivalent rows underneath. Let row height follow content; long titles, descriptions and
-  technology labels wrap naturally. Do not reserve empty controls for a missing demo link.
+- Two equal card columns with a gap inside the shared content container on wide screens; one column on
+  narrow screens. Choose the breakpoint according to readable card content.
+- The front of each card shows the cover image with the project title below it.
+- On devices that support hover, a subtle flip reveals the title, short summary and View project link.
+- Keyboard focus must also reveal the summary and provide access to the details link.
+- On touch devices without convenient hover, show the image, title, summary and details link together.
+- With reduced motion enabled, use a static presentation containing the same content and link.
+- For GymLog, use workout-details.png and the summary from content.md. It is a Local learning project
+  with no public demo; the details page provides its status, technologies and source-code link.
+- Preserve screenshot proportions. Accommodate long titles and summaries without clipping or layout
+  jumps when changing card faces. Add projects using the same card component and data structure.
 
 ## Project details
 
-The desktop and mobile details layout and manual carousel were accepted on 19 October 2026. This sketch
-records structure; apply the current palette and a faint mauve introduction gradient.
+The manual carousel was accepted on 19 October 2026. The text layout was revised on 5 November 2026 to
+provide a longer project description in one Markdown document. Apply the current palette and faint mauve
+introduction gradient. The earlier sketch remains a reference for the header and carousel.
 
-![Accepted project details layout and carousel; earlier colours](sketches/project-details-desktop-mobile.png)
+![Earlier project details layout and carousel sketch](sketches/project-details-desktop-mobile.png)
 
 1. Shared header, then Back to projects.
 2. Project name, summary, technologies with monochrome icons, textual status and View source code.
 3. One image carousel containing the project's screenshots. GymLog starts with Workout details and has
    five images in total.
-4. Key features, Backend implementation, My contribution and What I learned: two-column pairs on desktop,
-   stacked sections on mobile.
+4. A readable article explaining the application's purpose, workflow, key features and backend
+   implementation. GymLog uses About the project, Key features and Backend implementation headings.
 5. Back to projects near the shared footer.
+
+Project metadata and image descriptions live in config/projects.php. The content_file value identifies
+one Markdown document relative to resources; GymLog uses content/projects/gymlog/details.md. Laravel will
+read and render that content for the common details page. The article's headings and paragraphs flow
+naturally on both desktop and mobile.
 
 Use manual Previous and Next controls, a visible caption and image counter, without automatic advancement.
 Preserve image proportions and allow keyboard operation of the controls. Disable Previous on the first image
 and Next on the last; hide unnecessary navigation when a project has only one image. The number of images
 comes from the project data, and future projects use the same template.
 
-Use the original screenshot files and approved descriptions from content.md. The generated sketches guide
-layout and colour; they are not screenshot or logo assets for the application.
+Use the original screenshot files and approved descriptions from content.md. Generated sketches guide
+visual decisions; they are not screenshot or logo assets for the application.
 
 ## Navigation and interactive states
 
