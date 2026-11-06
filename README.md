@@ -4,16 +4,21 @@ A personal portfolio for presenting my skills and projects to potential employer
 
 ## Project status
 
-The initial development foundation is complete. The home and projects pages currently contain placeholder content, with navigation handled by Inertia. Local development and the initial production asset build have been verified.
+Development is in progress. The home page includes an introduction, About, skills and a downloadable CV.
+The project listing has responsive cards. Individual project pages render Markdown descriptions and show
+technologies, status and a source-code link. The screenshot carousel and contact form are still being completed.
 
-Planned for the first release:
+The source code remains public on GitHub and can be run locally. Public deployment is planned after a
+larger showcase project has been completed and added to the portfolio.
+
+First release scope:
 
 - An introduction and skills overview.
 - A project listing and individual project pages with descriptions and screenshots.
 - A downloadable CV.
 - A contact form.
 - A custom, responsive design.
-- A public deployment.
+- A public deployment after the showcase project has been added.
 
 ## Technology
 
@@ -70,6 +75,7 @@ Current routes:
 | --- | --- |
 | `/` | Home |
 | `/projects` | Projects |
+| `/projects/{slug}` | Project details; unknown slugs and placeholders return 404 |
 
 ## Check production assets locally
 
@@ -83,7 +89,8 @@ Keep the Laravel development server running and refresh the browser. Laravel wil
 
 ## Manual checks
 
-- Open both routes directly and refresh each page.
+- Open Home, Projects and `/projects/gymlog` directly and refresh each page.
+- Check that unknown project slugs and `/projects/coming-soon` return 404.
 - Navigate between Home and Projects using their links.
 - Check the browser's Back and Forward buttons.
 - Check the browser console for errors.

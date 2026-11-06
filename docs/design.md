@@ -204,6 +204,15 @@ introduction gradient. The earlier sketch remains a reference for the header and
    implementation. GymLog uses About the project, Key features and Backend implementation headings.
 5. Back to projects near the shared footer.
 
+The introduction uses a column with a 16 px gap, 24 px padding (32 px from 768 px), 16 px corners and a
+subtle horizontal mauve gradient from #392D36 to #1D161B. Leave 24 px above it for the top Back to projects
+link. Reset its h1 margin so spacing is controlled by the container. Technology badges wrap with an 8 px gap,
+use 14 px labels (16 px from 768 px) and 16 px monochrome decorative SVG masks beside visible names.
+
+Keep the article around 75ch wide, with 32 px outside spacing, 16 px paragraph/list spacing and 32/16 px
+before/after h2 headings. Use a short fading mauve rule below h2 headings, visible list markers, 24 px list
+padding and an 8 px gap between list items. Scope these rules to .project-content.
+
 Project metadata and image descriptions live in config/projects.php. The content_file value identifies
 one Markdown document relative to resources; GymLog uses content/projects/gymlog/details.md. Laravel will
 read and render that content for the common details page. The article's headings and paragraphs flow
