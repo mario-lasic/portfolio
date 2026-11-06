@@ -1,0 +1,15 @@
+.project-card {
+    background-color: var(--surface);
+    border: solid 1px #4B3B47;
+    border-radius: 16px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+}
+
+.project-card__image {
+    width: 100%;
+    height: auto;
+}

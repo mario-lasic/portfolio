@@ -1,6 +1,7 @@
 <script setup>
 import {Link} from '@inertiajs/vue3';
 import SiteLayout from "../Layouts/SiteLayout.vue";
+import ProjectCard from "../Components/ProjectCard.vue";
 
 defineProps({
     projects: Array
@@ -13,8 +14,9 @@ defineProps({
         <div class="project-container">
             <ul>
                 <li v-for="project in projects" :key="project.slug">
-                    <h2>{{ project.title }}</h2>
-                    <p>{{ project.summary }}</p>
+                    <ProjectCard :project="project">
+
+                    </ProjectCard>
                 </li>
             </ul>
         </div>
