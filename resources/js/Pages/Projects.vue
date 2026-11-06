@@ -11,12 +11,10 @@ defineProps({
 <template>
     <SiteLayout>
         <h1>Projects</h1>
-        <div class="project-container">
-            <ul>
+        <div class="projects-container">
+            <ul class="projects-grid">
                 <li v-for="project in projects" :key="project.slug">
-                    <ProjectCard :project="project">
-
-                    </ProjectCard>
+                    <ProjectCard :project="project"></ProjectCard>
                 </li>
             </ul>
         </div>
