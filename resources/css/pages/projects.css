@@ -28,3 +28,52 @@
         grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     }
 }
+
+.project-card__inner {
+    display: grid;
+    width: 100%;
+    gap: 16px;
+}
+
+.project-card__front {
+    display: grid;
+    justify-items: center;
+    align-content: center;
+    gap: 16px;
+}
+
+.project-card__back {
+    display: grid;
+    justify-items: center;
+    align-content: center;
+    gap: 16px;
+}
+
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+    .project-card {
+        perspective: 1000px;
+    }
+
+    .project-card__inner {
+        transform-style: preserve-3d;
+        transition: transform 500ms;
+    }
+
+    .project-card__front {
+        grid-area: 1 / 1;
+        backface-visibility: hidden;
+        transform: rotateY(0deg);
+    }
+
+    .project-card__back {
+        grid-area: 1 / 1;
+        backface-visibility: hidden;
+        transform: rotateY(180deg);
+    }
+
+    .project-card:hover, .project-card:focus-within {
+        .project-card__inner {
+            transform: rotateY(180deg);
+        }
+    }
+}

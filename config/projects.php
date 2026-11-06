@@ -39,4 +39,31 @@ return [
         ],
         "content_file" => "content/projects/gymlog/details.md"
     ],
+    [
+        "slug" => "coming-soon",
+        "title" => "Coming soon",
+        "summary" => "More projects will be added here.",
+        "technologies" => [],
+        "status" => "Planned",
+        "is_placeholder" => true,
+        "cover_image" => "data:image/svg+xml," . rawurlencode(
+                '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675">
+            <rect width="1200" height="675" fill="#392D36"/>
+            <text x="600" y="350" text-anchor="middle"
+                font-family="sans-serif" font-size="48" fill="#BCA9B7">
+                Coming soon
+            </text>
+        </svg>'
+            ),
+        "github_url" => null,
+        "demo_url" => null,
+        "images" => [
+            [
+                "src" => null,
+                "alt" => "Placeholder for an upcoming project.",
+                "caption" => "Coming soon",
+            ],
+        ],
+        "content_file" => null,
+    ],
 ];
