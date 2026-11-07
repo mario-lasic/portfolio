@@ -218,6 +218,11 @@ one Markdown document relative to resources; GymLog uses content/projects/gymlog
 read and render that content for the common details page. The article's headings and paragraphs flow
 naturally on both desktop and mobile.
 
+The gallery uses a rounded frame with a 2 px #725A6C border, 16 px corners and clipped overflow.
+Images retain their natural proportions. A small CSS edge trim compensates for the black border embedded
+in the current screenshots. Leave 32 px around the gallery and 12 px above its muted caption. The figure
+is omitted when the images list is empty.
+
 Use manual Previous and Next controls, a visible caption and image counter, without automatic advancement.
 Preserve image proportions and allow keyboard operation of the controls. Disable Previous on the first image
 and Next on the last; hide unnecessary navigation when a project has only one image. The number of images

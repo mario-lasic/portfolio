@@ -109,6 +109,7 @@
     padding-inline: 24px;
     margin-block-end: 16px;
 }
+
 .project-intro h1 {
     margin: 0;
 }
@@ -162,4 +163,27 @@
     mask-size: contain;
     mask-repeat: no-repeat;
     mask-position: center;
+}
+
+.project-gallery {
+    margin-block: 32px;
+}
+
+.project-gallery__frame {
+    border: 2px solid #725A6C;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.project-gallery__image {
+    display: block;
+    width: calc(100% + 10px);
+    height: auto;
+    margin: -5px;
+    max-width: none;
+}
+
+.project-gallery__caption {
+    margin-block-start: 12px;
+    color: var(--text-muted);
 }
