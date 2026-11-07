@@ -166,6 +166,8 @@
 }
 
 .project-gallery {
+    display: flex;
+    flex-direction: column;
     margin-block: 32px;
 }
 
@@ -184,6 +186,21 @@
 }
 
 .project-gallery__caption {
-    margin-block-start: 12px;
     color: var(--text-muted);
+}
+
+.project-gallery__buttons {
+    display: flex;
+    gap: 12px;
+    align-self: center;
+    margin-block-start: 8px;
+    flex-wrap: wrap;
+}
+
+.project-gallery__buttons button[aria-disabled="true"] {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+.project-gallery__buttons button[aria-disabled="true"]:hover {
+    background-color: transparent;
 }

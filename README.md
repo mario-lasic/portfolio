@@ -6,7 +6,8 @@ A personal portfolio for presenting my skills and projects to potential employer
 
 Development is in progress. The home page includes an introduction, About, skills and a downloadable CV.
 The project listing has responsive cards. Individual project pages render Markdown descriptions and show
-technologies, status and a source-code link. The screenshot carousel and contact form are still being completed.
+technologies, status and a source-code link. The screenshot carousel has manual controls and a changing
+image caption. The contact form is still being completed.
 
 The source code remains public on GitHub and can be run locally. Public deployment is planned after a
 larger showcase project has been completed and added to the portfolio.

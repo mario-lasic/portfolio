@@ -220,8 +220,14 @@ naturally on both desktop and mobile.
 
 The gallery uses a rounded frame with a 2 px #725A6C border, 16 px corners and clipped overflow.
 Images retain their natural proportions. A small CSS edge trim compensates for the black border embedded
-in the current screenshots. Leave 32 px around the gallery and 12 px above its muted caption. The figure
-is omitted when the images list is empty.
+in the current screenshots. Leave 32 px around the gallery. Place the muted caption directly below the
+image and the controls below the figure. Omit the whole gallery when the images list is empty.
+
+Keep the figure and its final figcaption together inside a shared gallery container. The caption combines
+position, total count and image description, using aria-live polite and aria-atomic true. Place native
+Previous/Next buttons after the figure. Use aria-disabled at the boundaries with matching JavaScript guards,
+so the controls remain focusable; visually dim unavailable buttons. Wrap the controls with a 12 px gap and
+hide them when there is only one image.
 
 Use manual Previous and Next controls, a visible caption and image counter, without automatic advancement.
 Preserve image proportions and allow keyboard operation of the controls. Disable Previous on the first image
